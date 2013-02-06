@@ -1,4 +1,5 @@
 CiscoUCS
 ========
-This UCSPowerTool script will verify the connection between the machine and the target Cisco UCS Manager. Failure code will return if connection failed.
-User's input of UCS endpoints and user name and password are required for a successful connection checking. UCSPowerTool has to be installed.
+The UCSPowerTool enable connectivity and series of functions to communicate with UCS Manager.
+Actions to be done in UCS Manager can be done via the PowerTool Scripts executed on powershell.
+A great tool for automating the UCS Manager capability on a remote machine.
