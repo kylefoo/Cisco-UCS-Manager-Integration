@@ -1,0 +1,15 @@
+#these are user's input for verifying the connection to the UCS Manager
+param(
+[String]$ucs
+,[String]$ucsuser
+,[String]$ucspass
+)
+#importation of below module enables functions to check connection, default directory after PowerTool is installed
+Import-Module "C:\Program Files (x86)\Cisco\Cisco UCS PowerTool\Modules\CiscoUcsPS\CiscoUcsPS.psd1"
+
+$ucspasswd = ConvertTo-SecureString $ucspass -AsPlainText -Force
+$ucscreds = New-Object System.Management.Automation.PSCredential ($ucsuser, $ucspasswd)
+
+#invoking connection to UCS Manager via powershell
+Connect-Ucs -Credential $ucscreds $ucs
+exit
